@@ -6,7 +6,12 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors()); // Allows Frontend to talk to Backend
+app.use(cors({
+    origin: [
+        "http://localhost:5173", 
+        "https://finance-app-backend-vmt5.onrender.com" 
+    ]
+}));
 app.use(express.json()); // Allows us to parse JSON bodies
 
 // --- DATABASE CONNECTION (MongoDB) ---
