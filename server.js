@@ -14,9 +14,6 @@ app.use(cors({
 }));
 app.use(express.json()); // Allows us to parse JSON bodies
 
-// --- DATABASE CONNECTION (MongoDB) ---
-// You will replace process.env.MONGO_URI with your actual connection string later
-// For now, if you don't have one, the app will start but DB calls will fail.
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/budgetbuddy';
 
 mongoose.connect(MONGO_URI)
