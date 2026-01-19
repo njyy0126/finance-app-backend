@@ -9,7 +9,8 @@ const app = express();
 app.use(cors({
     origin: [
         "http://localhost:5173", 
-        "https://finance-app-backend-vmt5.onrender.com" 
+        "https://finance-app-backend-vmt5.onrender.com",
+        "https://finance-app-frontend-mu.vercel.app"
     ]
 }));
 app.use(express.json()); // Allows us to parse JSON bodies
